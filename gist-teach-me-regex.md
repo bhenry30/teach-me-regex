@@ -1,10 +1,10 @@
-# Title (replace with your title)
+# Teach Me Regex
 
-Introductory paragraph (replace this with your text)
+Teach Me Regex is a tutorial explaining some components of regex, illustrating different components with an example expression
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+I will be walking you through this regular expression used for matching a hex value: /^#?([a-f0-9]{6}|[a-f0-9]{3})$/
 
 ## Table of Contents
 
@@ -23,9 +23,9 @@ Briefly summarize the regex you will be describing and what you will explain. In
 ## Regex Components
 
 ### Anchors
-
+Anchors assert something about the string or matching process. A caret `^` and dollar sign `$` are both anchors. A caret asserts position at start of the string, and a dollar sign asserts the position at the end of the string. So in our example  `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/` our string starts with zero or one `#` (because of the `?` quantifier, which I will cover next), and the sequence will end with a digit or letter.
 ### Quantifiers
-
+Quantifiers tell the regex engine to match a specific quantity of what is immediately to the left (or inside) of the quantifier. Asterisks `*`, plus signs `+`, question marks `?`, and curly braces `{}` are all used as quantifiers. In the our example, the question mark asserts that the `#`, which is the preceding token in the sequence, is optional. We also see curly braces with `6` and `3` in them, meaning a matching string will either have six or three characters following the optional `?`.
 ### OR Operator
 
 ### Character Classes
