@@ -1,10 +1,10 @@
 # Teach Me Regex
 
-Teach Me Regex is a tutorial explaining some components of regex, illustrating different components with an example expression
+Teach Me Regex is a tutorial explaining many core components of regex. 
 
 ## Summary
 
-I will be walking you through this regular expression used for matching a hex value: `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`
+I will be walking you through a regular expression used for matching a hex value, `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`, explaining several different components of regex that this expression uses, along with several others that will enhance your knowledge of regular expressions.
 
 ## Table of Contents
 
