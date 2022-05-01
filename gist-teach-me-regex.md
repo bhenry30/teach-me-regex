@@ -4,7 +4,7 @@ Teach Me Regex is a tutorial explaining some components of regex, illustrating d
 
 ## Summary
 
-I will be walking you through this regular expression used for matching a hex value: /^#?([a-f0-9]{6}|[a-f0-9]{3})$/
+I will be walking you through this regular expression used for matching a hex value: `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`
 
 ## Table of Contents
 
@@ -24,11 +24,15 @@ I will be walking you through this regular expression used for matching a hex va
 
 ### Anchors
 Anchors assert something about the string or matching process. A caret `^` and dollar sign `$` are both anchors. A caret asserts position at start of the string, and a dollar sign asserts the position at the end of the string. So in our example  `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/` our string starts with zero or one `#` (because of the `?` quantifier, which I will cover next), and the sequence will end with a digit or letter.
+
 ### Quantifiers
 Quantifiers tell the regex engine to match a specific quantity of what is immediately to the left (or inside) of the quantifier. Asterisks `*`, plus signs `+`, question marks `?`, and curly braces `{}` are all used as quantifiers. In the our example, the question mark asserts that the `#`, which is the preceding token in the sequence, is optional. We also see curly braces with `6` and `3` in them, meaning a matching string will either have six or three characters following the optional `?`.
+
 ### OR Operator
+The OR Operator `|` lets us match a string that contains the character on either side of the `|` in that specific place in the sequence. In our example, `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`, we are asserting that matching results can either have `[a-f0-9]{6}` (6 characters of digits/letters) or (`|`) `[a-f0-9]{3}` (3 characters of digits/letters).
 
 ### Character Classes
+A character class defines a set of characters. Many character classes are represented by a character following a backslash. For example, `\d` matches any digit, just like `[0-9]`. `\w` matches any alphanumeric character (including the undescore). The bracket expression of this would be `[A-Za-z0-9_]`.
 
 ### Flags
 
